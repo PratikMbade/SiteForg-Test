@@ -6,6 +6,7 @@ import { ModeToggle } from "@/components/Buttons/Themetoggle";
 import { Hero } from "@/components/global/Hero";
 import { Navbar } from "@/components/global/Navbar";
 import Image from "next/image";
+import BlocksPage from "./system/page";
 
 export default function Home() {
   return (
