@@ -12,6 +12,8 @@ const nextConfig = {
       "img.clerk.com",
       "subdomain",
       "files.stripe.com",
+      "upload.wikimedia.org",
+      "logos-world.net"
     ],
   },
 };
