@@ -1,3 +1,4 @@
+import BlocksPage from "@/components/(docs)/(blocks)/block-main";
 import { FeaturesSectionGrid } from "@/components/(homepage)/feature-grid";
 import { InfiniteMovingCardsDemo } from "@/components/(homepage)/infinite-card-scroll";
 import { FeaturesSectionDemo } from "@/components/(homepage)/problem-info-cards";
@@ -6,7 +7,9 @@ import { ModeToggle } from "@/components/Buttons/Themetoggle";
 import { Hero } from "@/components/global/Hero";
 import { Navbar } from "@/components/global/Navbar";
 import Image from "next/image";
-import BlocksPage from "./system/page";
+
+
+
 
 export default function Home() {
   return (
@@ -17,6 +20,10 @@ export default function Home() {
       <FeaturesSectionDemo/>
       <FeaturesSectionGrid/>
       <InfiniteMovingCardsDemo/>
+
+      <div className=" w-full">
+        <BlocksPage/>
+      </div>
     </main>
   );
 }

@@ -1,31 +1,23 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Index } from "@/components/registry/index"
+import * as React from "react";
+import { Index } from "@/components/registry/index";
 
-import { cn } from "@/lib/utils"
-import { useConfig } from "@/hooks/useConfig"
+import { cn } from "@/lib/utils";
+import { useConfig } from "@/hooks/useConfig";
 
-import { Icons } from "@/components/icons"
+import { Icons } from "@/components/icons";
 
-
-
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
-import { styles } from "@/components/registry/style"
-import { ThemeWrapper } from "../Theme-warrper"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { styles } from "@/components/registry/style";
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
-  name: string
-  extractClassname?: boolean
-  extractedClassNames?: string
-  align?: "center" | "start" | "end"
-  description?: string
-  hideCode?: boolean
+  name: string;
+  extractClassname?: boolean;
+  extractedClassNames?: string;
+  align?: "center" | "start" | "end";
+  description?: string;
+  hideCode?: boolean;
 }
 
 export function ComponentPreview({
@@ -39,24 +31,17 @@ export function ComponentPreview({
   hideCode = false,
   ...props
 }: ComponentPreviewProps) {
-  console.log("name got",name)
+
   const [config] = useConfig()
-  console.log("config.style",config.style)
   const index = styles.findIndex((style) => style.name === config.style)
-  console.log('index',index)
 
   const Codes = React.Children.toArray(children) as React.ReactElement[]
-  console.log('code',Codes)
   const Code = Codes[index]
-  console.log("code new",Code)
 
   const Preview = React.useMemo(() => {
-       console.log("data",Index[config.style][name])
     const Component = Index[config.style][name]?.component
-    console.log("component",Component)
 
     if (!Component) {
-
       return (
         <p className="text-sm text-muted-foreground">
           Component{" "}
@@ -71,8 +56,6 @@ export function ComponentPreview({
     return <Component />
   }, [name, config.style])
 
-
-
   const codeString = React.useMemo(() => {
     if (
       typeof Code?.props["data-rehype-pretty-code-fragment"] !== "undefined"
@@ -83,6 +66,7 @@ export function ComponentPreview({
       return Button?.props?.value || Button?.props?.__rawString__ || null
     }
   }, [Code])
+
 
   return (
     <div
@@ -105,37 +89,28 @@ export function ComponentPreview({
               >
                 Code
               </TabsTrigger>
+
             </TabsList>
           )}
         </div>
-        <TabsContent value="preview" className="relative rounded-md border">
-        <div className="flex items-center justify-between p-4">
+        <TabsContent
+          value="preview"
+          className="relative rounded-md border "
+        >
+          <div className=" "></div>
 
-          </div>
-          <ThemeWrapper defaultTheme="zinc">
-            <div
-              className={cn(
-                "preview flex min-h-[350px] w-full justify-center p-10",
-                {
-                  "items-center": align === "center",
-                  "items-start": align === "start",
-                  "items-end": align === "end",
-                }
-              )}
+          <div className="  min-h-[150px]   mt-0">
+            <React.Suspense
+              fallback={
+                <div className="flex w-full  text-sm text-muted-foreground">
+                  <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                  Loading...
+                </div>
+              }
             >
-              <React.Suspense
-                fallback={
-                  <div className="flex w-full items-center justify-center text-sm text-muted-foreground">
-                    <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
-                    Loading...
-                  </div>
-                }
-              >
-                {Preview}
-              </React.Suspense>
-            </div>
-          </ThemeWrapper>
-   
+              {Preview}
+            </React.Suspense>
+          </div>
         </TabsContent>
         <TabsContent value="code">
           <div className="flex flex-col space-y-4">
@@ -146,5 +121,5 @@ export function ComponentPreview({
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }

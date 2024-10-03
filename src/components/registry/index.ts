@@ -49,6 +49,7 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+
     "label-demo": {
       name: "label-demo",
       type: "registry:example",
@@ -60,6 +61,99 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+  
+    "header-demo": {
+      name: "header-demo",
+      type: "registry:block",
+      registryDependencies: ["header"],
+      files: ["/src/components/(docs)/(components)/header.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/header")),
+      source: "src/components/(docs)/(components)/header.tsx",
+      category: "Authentication",
+      subcategory: "Login",
+      chunks: []
+    },
+    "hero1-demo": {
+      name: "hero1-demo",
+      type: "registry:block",
+      registryDependencies: ["hero1"],
+      files: ["/src/components/(docs)/(components)/hero1.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/hero1")),
+      source: "src/components/(docs)/(components)/hero1.tsx",
+      category: "hero-section",
+      subcategory: "hero",
+      chunks: []
+    },
+    "hero2-demo": {
+      name: "hero2-demo",
+      type: "registry:block",
+      registryDependencies: ["hero2"],
+      files: ["/src/components/(docs)/(components)/hero2.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/hero2")),
+      source: "src/components/(docs)/(components)/hero2.tsx",
+      category: "hero-section",
+      subcategory: "hero",
+      chunks: []
+    },
+
+    "brands-demo": {
+      name: "brands-demo",
+      type: "registry:block",
+      registryDependencies: ["brands"],
+      files: ["/src/components/(docs)/(components)/brands.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/brands")),
+      source: "src/components/(docs)/(components)/brands.tsx",
+      category: "brands",
+      subcategory: "brands",
+      chunks: []
+    },
+    "blogs-demo": {
+      name: "blogs-demo",
+      type: "registry:block",
+      registryDependencies: ["blogs"],
+      files: ["/src/components/(docs)/(components)/blogs.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/blogs")),
+      source: "src/components/(docs)/(components)/blogs.tsx",
+      category: "blogs",
+      subcategory: "blogs",
+      chunks: []
+    },
+    "testimonial-demo": {
+      name: "testimonial-demo",
+      type: "registry:block",
+      registryDependencies: ["blogs"],
+      files: ["/src/components/(docs)/(components)/testimonial.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/testimonial")),
+      source: "src/components/(docs)/(components)/blogs.tsx",
+      category: "blogs",
+      subcategory: "blogs",
+      chunks: []
+    },
+    "footer-demo": {
+      name: "footer-demo",
+      type: "registry:block",
+      registryDependencies: ["blogs"],
+      files: ["/src/components/(docs)/(components)/footer.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/footer")),
+      source: "src/components/(docs)/(components)/footer.tsx",
+      category: "blogs",
+      subcategory: "blogs",
+      chunks: []
+    },
+    "teams-demo": {
+      name: "teams-demo",
+      type: "registry:block",
+      registryDependencies: ["teams"],
+      files: ["/src/components/(docs)/(components)/teams.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/teams")),
+      source: "src/components/(docs)/(components)/teams.tsx",
+      category: "teams",
+      subcategory: "teams",
+      chunks: []
+    },
+  },
+  
+
     "avatar": {
       name: "avatar",
       type: "registry:ui",
@@ -74,6 +168,7 @@ export const Index: Record<string, any> = {
     "authentication-01": {
       name: "authentication-01",
       type: "registry:block",
+      style:"new-york",
       registryDependencies: ["button","card","input","label"],
       files: ["components/(docs)/authentication-01.tsx"],
       component: React.lazy(() => import("@/components/(docs)/authentication-01.tsx")),
@@ -82,5 +177,5 @@ export const Index: Record<string, any> = {
       subcategory: "Login",
       chunks: []
     },
-}
+
 }

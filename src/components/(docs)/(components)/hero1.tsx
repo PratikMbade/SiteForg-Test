@@ -1,15 +1,4 @@
-import {ComponentPreview} from '@/components/(docs)/componentpreview/components-preview'
 
-# Hero Component
-
-The hero section is the 
-first big part of a webpage that grabs your attention. It’s the large area you see at the top when you open a website.
-
-
-<ComponentPreview name="hero1-demo" description="An 6 digits input OTP." />
-
-
-```tsx 
 
 export default function MainSection() {
     return (
@@ -53,10 +42,3 @@ export default function MainSection() {
     );
   }
   
-
-```
-
-<ComponentPreview name="hero2-demo" description="An 6 digits input OTP." />
-
-
-

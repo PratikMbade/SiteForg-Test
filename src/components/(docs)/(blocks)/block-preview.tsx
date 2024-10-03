@@ -29,11 +29,13 @@ export function BlockPreview({
     return null
   }
 
+
+
   return (
     <Tabs
       id={block.name}
       defaultValue="preview"
-      className="relative grid w-full scroll-m-20 gap-4"
+      className="relative grid w-[80%]  scroll-m-20 gap-4"
       style={
         {
           "--container-height": block.container?.height,
@@ -49,10 +51,10 @@ export function BlockPreview({
           <ResizablePanel
             ref={ref}
             className={cn(
-              "relative rounded-lg border bg-background border-border"
+              "relative rounded-lg border bg-background border-border w-[70%]"
             )}
             defaultSize={100}
-            minSize={30}
+            minSize={20}
           >
             {isLoading ? (
               <div className="absolute inset-0 z-10 flex h-[--container-height] w-full items-center justify-center gap-2 bg-background text-sm text-muted-foreground">
