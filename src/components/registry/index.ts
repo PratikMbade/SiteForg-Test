@@ -73,6 +73,28 @@ export const Index: Record<string, any> = {
       subcategory: "Login",
       chunks: []
     },
+    "header1-demo": {
+      name: "header1-demo",
+      type: "registry:block",
+      registryDependencies: ["header1"],
+      files: ["/src/components/(docs)/(components)/header1.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/header1")),
+      source: "src/components/(docs)/(components)/header1.tsx",
+      category: "header",
+      subcategory: "header",
+      chunks: []
+    },
+    "web3header-demo": {
+      name: "web3header-demo",
+      type: "registry:block",
+      registryDependencies: ["web3header"],
+      files: ["/src/components/(docs)/(components)/web3header.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/web3header")),
+      source: "src/components/(docs)/(components)/web3header.tsx",
+      category: "header",
+      subcategory: "header",
+      chunks: []
+    },
     "hero1-demo": {
       name: "hero1-demo",
       type: "registry:block",
@@ -151,6 +173,130 @@ export const Index: Record<string, any> = {
       subcategory: "teams",
       chunks: []
     },
+    "login-demo": {
+      name: "login-demo",
+      type: "registry:block",
+      registryDependencies: ["login"],
+      files: ["/src/components/(docs)/(components)/login.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/login")),
+      source: "src/components/(docs)/(components)/login.tsx",
+      category: "login",
+      subcategory: "login",
+      chunks: []
+    },
+    "signup-demo": {
+      name: "signup-demo",
+      type: "registry:block",
+      registryDependencies: ["signup"],
+      files: ["/src/components/(docs)/(components)/signup.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/signup")),
+      source: "src/components/(docs)/(components)/signup.tsx",
+      category: "signup",
+      subcategory: "signup",
+      chunks: []
+    },
+    "pricing-demo": {
+      name: "pricing-demo",
+      type: "registry:block",
+      registryDependencies: ["pricing"],
+      files: ["/src/components/(docs)/(components)/pricing.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/pricing")),
+      source: "src/components/(docs)/(components)/pricing.tsx",
+      category: "pricing",
+      subcategory: "pricing",
+      chunks: []
+    },
+    "problem-demo": {
+      name: "problem-demo",
+      type: "registry:block",
+      registryDependencies: ["problem"],
+      files: ["/src/components/(docs)/(components)/problem.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/problem")),
+      source: "src/components/(docs)/(components)/problem.tsx",
+      category: "problem",
+      subcategory: "problem",
+      chunks: []
+    },
+    "howitworks-demo": {
+      name: "howitworks-demo",
+      type: "registry:block",
+      registryDependencies: ["howitworksdemo"],
+      files: ["/src/components/(docs)/(components)/howitwork.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/howitwork")),
+      source: "src/components/(docs)/(components)/howitwork.tsx",
+      category: "problem",
+      subcategory: "problem",
+      chunks: []
+    },
+    "card-stylecta-demo": {
+      name: "card-stylecta-demo",
+      type: "registry:block",
+      registryDependencies: ["card-stylecta"],
+      files: ["/src/components/(docs)/(components)/cta-section/card-stylecta.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/cta-section/card-stylecta")),
+      source: "src/components/(docs)/(components)/cta-section/card-stylecta.tsx",
+      category: "card-stylecta",
+      subcategory: "card-stylecta",
+      chunks: []
+    },
+    "darkcta-demo": {
+      name: "darkcta-demo",
+      type: "registry:block",
+      registryDependencies: ["darkcta"],
+      files: ["/src/components/(docs)/(components)/cta-section/darkcta.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/cta-section/darkcta")),
+
+      category: "darkcta",
+      subcategory: "darkcta",
+      chunks: []
+    },
+    "floatingcta-demo": {
+      name: "floatingcta-demo",
+      type: "registry:block",
+      registryDependencies: ["floatingcta"],
+      files: ["/src/components/(docs)/(components)/cta-section/floatingcta.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/cta-section/floatingcta")),
+
+      category: "floatingcta",
+      subcategory: "floatingcta",
+      chunks: []
+    },
+    "gradientcta-demo": {
+      name: "gradientcta-demo",
+      type: "registry:block",
+      registryDependencies: ["gradientcta"],
+      files: ["/src/components/(docs)/(components)/cta-section/gradientcta.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/cta-section/gradientcta")),
+
+      category: "gradientcta",
+      subcategory: "gradientcta",
+      chunks: []
+    },
+
+    "productlist-demo": {
+      name: "productlist-demo",
+      type: "registry:block",
+      registryDependencies: ["productlist"],
+      files: ["/src/components/(docs)/(components)/productlist.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/productlist")),
+
+      category: "gradientcta",
+      subcategory: "gradientcta",
+      chunks: []
+    },
+    "faq-demo": {
+      name: "faq-demo",
+      type: "registry:block",
+      registryDependencies: ["faq"],
+      files: ["/src/components/(docs)/(components)/faq.tsx"],
+      component: React.lazy(() => import("@/components/(docs)/(components)/faq")),
+
+      category: "gradientcta",
+      subcategory: "gradientcta",
+      chunks: []
+    },
+
+
   },
   
 
