@@ -10,6 +10,7 @@ import { Icons } from "@/components/icons";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { styles } from "@/components/registry/style";
+import { CopyButton } from "@/components/copy-button";
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;
@@ -92,8 +93,13 @@ export function ComponentPreview({
           value="preview"
           className="relative rounded-md border "
         >
-          <div className=" "></div>
-
+<div className="flex items-center gap-2">
+              <CopyButton
+                value={codeString}
+                variant="outline"
+                className="h-7 w-7 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
+              />
+            </div>
           <div className="  min-h-[150px]   mt-0">
             <React.Suspense
               fallback={

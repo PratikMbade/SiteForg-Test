@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { useEffect } from "react"
 import {
   AudioWaveform,
   BadgeCheck,
@@ -76,6 +77,9 @@ import {
 } from "@/components/ui/sidebar"
 import { signOut } from "next-auth/react"
 import { redirect } from "next/navigation"
+import { getUserinfo } from "@/actions/user"
+import { User } from "next-auth"
+import { useRouter } from "next/router"
 // This is sample data.
 const data = {
   user: {
@@ -138,7 +142,7 @@ const data = {
       items: [
         {
           title: "Introduction",
-          url: "#",
+          url: "/dashboard/introduction",
         },
         {
           title: "Get Started",
@@ -199,15 +203,25 @@ const data = {
 
 export default function DashboardWrapper({children}:{children:React.ReactNode}) {
   const [activeTeam, setActiveTeam] = React.useState(data.teams[0])
+  const [user ,setUser] = React.useState<User | null>()
+  const router = useRouter()
 
   const handleLogout = () =>{
     signOut({
       redirect:false
     })
 
-    redirect("/")
+    router.push("/")
   }
 
+  const getUserData = async ()=>{
+    const user = await getUserinfo();
+    setUser(user)
+  }
+
+  useEffect(()=>{ 
+    getUserData()    
+  },[])
 
 
 
@@ -338,17 +352,17 @@ export default function DashboardWrapper({children}:{children:React.ReactNode}) 
                   >
                     <Avatar className="h-8 w-8 rounded-lg">
                       <AvatarImage
-                        src={data.user.avatar}
-                        alt={data.user.name}
+                        src={user?.image!}
+                        alt={user?.name!}
                       />
                       <AvatarFallback className="rounded-lg">CN</AvatarFallback>
                     </Avatar>
                     <div className="grid flex-1 text-left text-sm leading-tight">
                       <span className="truncate font-semibold">
-                        {data.user.name}
+                        {user?.name}
                       </span>
                       <span className="truncate text-xs">
-                        {data.user.email}
+                        {user?.email}
                       </span>
                     </div>
                     <ChevronsUpDown className="ml-auto size-4" />
@@ -364,8 +378,8 @@ export default function DashboardWrapper({children}:{children:React.ReactNode}) 
                     <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                       <Avatar className="h-8 w-8 rounded-lg">
                         <AvatarImage
-                          src={data.user.avatar}
-                          alt={data.user.name}
+                          src={user?.image!}
+                          alt={user?.name!}
                         />
                         <AvatarFallback className="rounded-lg">
                           CN
@@ -373,10 +387,10 @@ export default function DashboardWrapper({children}:{children:React.ReactNode}) 
                       </Avatar>
                       <div className="grid flex-1 text-left text-sm leading-tight">
                         <span className="truncate font-semibold">
-                          {data.user.name}
+                          {user?.name}
                         </span>
                         <span className="truncate text-xs">
-                          {data.user.email}
+                          {user?.email}
                         </span>
                       </div>
                     </div>
@@ -416,6 +430,25 @@ export default function DashboardWrapper({children}:{children:React.ReactNode}) 
         <SidebarRail />
       </Sidebar>
       <SidebarInset>
+      <header className="fixed w-full   flex h-16 border-b border-b-neutral-800/50 dark:border-b-neutral-800 bg-sidebar dark:bg-black   shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+          <div className="flex items-center gap-2 px-4">
+            <SidebarTrigger className="-ml-1" />
+            <Separator orientation="vertical" className="mr-2 h-4" />
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem className="hidden md:block">
+                  <BreadcrumbLink href="#">
+                    Building Your Application
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="hidden md:block" />
+                <BreadcrumbItem>
+                  <BreadcrumbPage>Data Fetching</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </header>
         {children}
       </SidebarInset>
     </SidebarProvider>

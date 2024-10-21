@@ -13,47 +13,42 @@ import {
 export function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Built for developers",
+      title: "Customizable Templates",
       description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
+        " Choose from a variety of pre-designed templates or create your own from scratch.",
       icon: <IconTerminal2 />,
     },
     {
-      title: "Ease of use",
+      title: "Mobile-First Design",
       description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
+        "All our boilerplates are optimized for mobile responsiveness, ensuring seamless performance across all devices.",
       icon: <IconEaseInOut />,
     },
     {
-      title: "Pricing like no other",
+      title: "Clean & Well-Structured Code",
       description:
         "Our prices are best in the market. No cap, no lock, no credit card required.",
       icon: <IconCurrencyDollar />,
     },
     {
-      title: "100% Uptime guarantee",
+      title: "CSS Framework Integration",
       description: "We just cannot be taken down by anyone.",
       icon: <IconCloud />,
     },
     {
-      title: "Multi-tenant Architecture",
+      title: "SEO-Lightweight & Fast",
       description: "You can simply share passwords instead of buying new seats",
       icon: <IconRouteAltLeft />,
     },
     {
-      title: "24/7 Customer Support",
+      title: "Lightweight & Fast",
       description:
         "We are available a 100% of the time. Atleast our AI Agents are.",
       icon: <IconHelp />,
     },
+  
     {
-      title: "Money back guarantee",
-      description:
-        "If you donot like EveryAI, we will convince you to like us.",
-      icon: <IconAdjustmentsBolt />,
-    },
-    {
-      title: "And everything else",
+      title: "Version Control Ready",
       description: "I just ran out of copy ideas. Accept my sincere apologies",
       icon: <IconHeart />,
     },
@@ -61,7 +56,7 @@ export function FeaturesSectionDemo() {
   return (
     <>
     <p className="text-4xl font-semibold text-primary mt-5">What We Offer</p>
-    <p className="text-xl font-semibold my-3">Unbeatable Features for Developers, Startups, and Innovators Alike</p>
+    <p className="text-xl font-semibold my-3">Save time, focus on your design, and launch your projects quicker with ready-to-use, customizable web boilerplates.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
         {features.map((feature, index) => (
           <Feature key={feature.title} {...feature} index={index} />

@@ -1,5 +1,5 @@
 export default {
-  logo: <span>RD Documentation</span>,
+  logo: <span className="text-2xl font-bold">Site Forg</span>,
   project: {
     link: 'https://github.com/shuding/nextra'
   },

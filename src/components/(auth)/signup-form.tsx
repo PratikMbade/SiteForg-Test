@@ -146,7 +146,7 @@ export function SingupForm() {
           <SocialLogin/>
         </CardContent> 
 
-        <CardFooter className="w-full flex items-center justify-center border">
+        <CardFooter className="w-full flex items-center justify-center ">
         <Link href="/login">
         <Button type="button" variant="link">
           Already have an account

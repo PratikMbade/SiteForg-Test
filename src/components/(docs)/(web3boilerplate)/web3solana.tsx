@@ -84,7 +84,7 @@ const WalletAdapter = () => {
         <TabsContent value="ethereum">
           <div className="relative  flex   justify-between items-center w-[100%] ">
 
-         <pre className="bg-gray-900 text-white p-4 rounded-md overflow-x-scroll flex-grow mr-2">
+         <pre className="bg-stone-900 text-white p-4 rounded-md overflow-x-scroll flex-grow mr-2">
               <code>{ ethereumCode }</code>
             </pre>
 

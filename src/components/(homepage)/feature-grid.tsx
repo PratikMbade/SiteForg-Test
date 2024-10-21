@@ -11,7 +11,7 @@ import Link from "next/link";
 export function FeaturesSectionGrid() {
   const features = [
     {
-      title: "Track issues effectively",
+      title: "Components",
       description:
         "Track and manage your project issues with ease using our intuitive interface.",
       skeleton: <SkeletonOne />,
@@ -19,9 +19,9 @@ export function FeaturesSectionGrid() {
         "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
     },
     {
-      title: "Generate pictures & video with AI",
+      title: "Launching soon.",
       description:
-        "generating stunning photos effortlessly using our advanced AI technology.",
+        "Generate pictures & video with AI",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
     },

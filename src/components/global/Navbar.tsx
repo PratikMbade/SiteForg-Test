@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/theme-modal";
 import Link from "next/link";
+import Image from "next/image";
 
 interface NavType {
   name: string;
@@ -44,8 +45,14 @@ const HeaderSquareWeb2 = ({
         <div className="fixed  pb-2  bg-white border-b border-b-neutral-800  dark:bg-black w-full flex z-40 items-center justify-center ">
           <div className="    h-14  lg:[80%] xl:w-3/4">
             <div className="flex  items-center   justify-between  mt-4 px-5  mb-3  w-[100vw] lg:w-full  ">
-              <div>
-                <p className="text-2xl font-semibold">Site Forg</p>
+            <div>
+                <Image
+                  src="/siteforg.png"
+                  alt="logo"
+                  width={80}
+                  height={80}
+                  className="-translate-y-1"
+                />{" "}
               </div>
 
               <div className="hidden lg:block">
