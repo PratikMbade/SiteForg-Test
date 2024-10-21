@@ -1,0 +1,34 @@
+
+<svg
+  version="1.0"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="2400"
+  height="1800"
+>
+  
+  <rect
+    x="0"
+    y="0"
+    width="100%"
+    height="100%"
+    fill="#feffff"
+    fill-opacity="1"
+  ></rect>
+  <svg
+    version="1.0"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0"
+    y="0"
+    width="2400"
+    height="1800"
+    viewBox="0 0 340.000000 250.000000"
+    preserveAspectRatio="xMidYMid meet"
+    color-interpolation-filters="sRGB"
+  >
+    <defs><linearGradient id="92" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#fa71cd"/> <stop offset="100%" stop-color="#9b59b6"/></linearGradient><linearGradient id="93" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f9d423"/> <stop offset="100%" stop-color="#f83600"/></linearGradient><linearGradient id="94" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0064d2"/> <stop offset="100%" stop-color="#1cb0f6"/></linearGradient><linearGradient id="95" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f00978"/> <stop offset="100%" stop-color="#3f51b1"/></linearGradient><linearGradient id="96" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7873f5"/> <stop offset="100%" stop-color="#ec77ab"/></linearGradient><linearGradient id="97" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f9d423"/> <stop offset="100%" stop-color="#e14fad"/></linearGradient><linearGradient id="98" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#009efd"/> <stop offset="100%" stop-color="#2af598"/></linearGradient><linearGradient id="99" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#ffcc00"/> <stop offset="100%" stop-color="#00b140"/></linearGradient><linearGradient id="100" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#d51007"/> <stop offset="100%" stop-color="#ff8177"/></linearGradient><linearGradient id="102" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#a2b6df"/> <stop offset="100%" stop-color="#0c3483"/></linearGradient><linearGradient id="103" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7ac5d8"/> <stop offset="100%" stop-color="#eea2a2"/></linearGradient><linearGradient id="104" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00ecbc"/> <stop offset="100%" stop-color="#007adf"/></linearGradient><linearGradient id="105" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#b88746"/> <stop offset="100%" stop-color="#fdf5a6"/></linearGradient></defs> <g class="imagesvg isNoFont" transform="translate(157.39848232269287,103.72802543640137)"><g><rect fill="#333" fill-opacity="0" stroke-width="2" x="0" y="0" width="25.203035004899665" height="42.543948353983225" class="image-rect"/> <svg x="0" y="0" width="25.203035004899665" height="42.543948353983225" filtersec="colorsb4400448284" class="image-svg-svg primary" style="overflow: visible;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.0027697046753019094 -0.0019038516329601407 14.556482315063477 24.571903228759766"><path d="M13.83 14A6.48 6.48 0 0 0 12 11.82a8.93 8.93 0 0 0-2.35-1.28l-2.4-.88c-.25-.08-.56-.2-.92-.35a4.84 4.84 0 0 1-1-.58 3.1 3.1 0 0 1-.85-.91 2.58 2.58 0 0 1-.35-1.42 3.16 3.16 0 0 1 .2-1.09 3.52 3.52 0 0 1 .61-1.06 3.32 3.32 0 0 1 1-.78 3 3 0 0 1 1.36-.3 4.19 4.19 0 0 1 1.11.16 2.8 2.8 0 0 1 1.08.56 3 3 0 0 1 .82 1.05 3.82 3.82 0 0 1 .32 1.65h3.45a7 7 0 0 0-.51-2.72 6.18 6.18 0 0 0-1.41-2.08A6 6 0 0 0 10 .46 7.73 7.73 0 0 0 7.29 0a6.45 6.45 0 0 0-2.92.62A6.87 6.87 0 0 0 2.3 2.19a6.39 6.39 0 0 0-1.23 2.08 6.45 6.45 0 0 0-.4 2.16 7.89 7.89 0 0 0 .39 2.45 4.63 4.63 0 0 0 1.21 2c.28.26.55.49.8.69a6 6 0 0 0 .93.6 13.65 13.65 0 0 0 1.33.6c.52.21 1.17.47 2 .77l1.24.46a5.21 5.21 0 0 1 1.23.67 3.28 3.28 0 0 1 .93 1.06 3.2 3.2 0 0 1 .37 1.63h3.45a7.13 7.13 0 0 0-.72-3.36z" fill="#ed6c00"/><path d="M5.21 20.84a3.85 3.85 0 0 1-1.15-1.28 4.55 4.55 0 0 1-.49-1.44 7.11 7.11 0 0 1-.12-1H0a7.62 7.62 0 0 0 .69 3.38 7.25 7.25 0 0 0 1.74 2.32 6.71 6.71 0 0 0 2.35 1.33 8.15 8.15 0 0 0 2.51.42V21.4a3.49 3.49 0 0 1-2.08-.56z" fill="#e6002d"/></svg></svg> </g></g><defs v-gra="od"/>
+  </svg>
+</svg>
+
+
