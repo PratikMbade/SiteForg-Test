@@ -14,7 +14,7 @@ import { SiWalletconnect } from "react-icons/si";
 
 export function FeaturesToggle() {
   return (
-    <div className=" flex flex-col items-center justify-center my-16">
+    <div className=" flex flex-col items-center justify-center my-16 w-screen bg-stone-200 dark:bg-zinc-800 py-10">
       <div className="mb-10  max-w-4xl mx-auto ">
         <h1 className="font-extrabold text-xl md:text-5xl  text-neutral-600 ">
           Boost your app instantly, launch quicker, and start earning
@@ -98,17 +98,7 @@ export function FeaturesToggle() {
                   ✔️ Maintain design consistency across your app by leveraging
                   Tailwinds predefined utility classes.
                 </li>
-                <li className="flex items-center justify-center">
-                  <p className="text-lg font-bold">With</p>
-
-                  <Image
-                    src="https://picperf.io/https://laravelnews.s3.amazonaws.com/images/tailwindcss-1633184775.jpg"
-                    alt="tailwind"
-                    height={200}
-                    width={200}
-                    className="mix-blend-multiply"
-                  />
-                </li>
+                
               </ul>
             </div>
           </TabsContent>

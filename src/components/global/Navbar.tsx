@@ -20,7 +20,7 @@ interface HeaderRoundedWeb2Types {
 }
 
 // {company heading, navigation, login ,signup, }
-const HeaderSquareWeb2 = ({
+const HeaderRoundedWeb2 = ({
   title,
   navigationData,
   loginPath,
@@ -32,9 +32,7 @@ const HeaderSquareWeb2 = ({
     { name: "Home", href: "#", current: true },
     { name: "Product", href: "#", current: false },
     { name: "Feature", href: "#", current: false },
-    { name: "Pricing", href: "#", current: false },
     { name: "About", href: "#", current: false },
-
   ];
 
   function classNames(...classes: string[]) {
@@ -43,102 +41,98 @@ const HeaderSquareWeb2 = ({
 
   return (
     <>
-      <div className="relative mt-0  flex items-center justify-center h-20  ">
-        <div className="fixed mt-0 h-20  bg-white shadow-xl  dark:bg-neutral-800 w-full flex z-40 items-center justify-center ">
-          <div className="    h-16  lg:[80%] xl:w-3/4">
-            <div className="flex  items-center   justify-between  mt-4 px-5  mb-3  w-[100vw] lg:w-full  ">
-              <div className="hidden dark:block">
-                <Image
-                  src="/siteforg.png"
-                  alt="logo"
-                  width={140}
-                  height={140}
-                  className="-translate-y-1"
-                />{" "}
-              </div>
+      <div className="relative  flex items-center justify-center h-24 z-40 ">
+        <div className=" fixed bg-gradient-to-r from-neutral-200 to-stone-300  dark:bg-gradient-to-r dark:from-neutral-800 dark:to-stone-800 flex rounded-full w-[90%]  h-14  lg:[80%] xl:w-3/4">
+          <div className="flex  items-center  w-full justify-between mx-5 lg:mx-10 mt-4  mb-3">
+            <div className=" dark:hidden">
+              <Image
+              src="/site-light.png"
+              alt="site"
+              height={100}
+              width={100}
+              />
+            </div>
 
-              <div className="dark:hidden">
-                <Image
-                  src="/SiteForgLight.jpeg"
-                  alt="logo"
-                  width={130}
-                  height={130}
-                  className="-translate-y-1"
-                />{" "}
-              </div>
+            <div className="hidden dark:block">
+              <Image
+              src="/siteforg.png"
+              alt="site"
+              height={100}
+              width={100}
+              />
+            </div>
 
-              <div className="hidden lg:block">
-                <div className="flex space-x-4">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      aria-current={item.current ? "page" : undefined}
-                      className={classNames(
-                        item.current
-                          ? " text-black dark:text-white"
-                          : "text-black/70 dark:text-gray-400  dark:hover:text-white",
-                        "rounded-md px-3 py-2  lg:text-sm xl:text-md font-medium"
-                      )}
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              <div className="lg:hidden">
-                <Button
-                  variant="outline"
-                  onClick={() => setIsOpen(!isOpen)}
-                  className="rounded-md  p-1"
-                >
-                  {isOpen ? (
-                    <X className="h-6 w-6" />
-                  ) : (
-                    <Menu className="h-6 w-6" />
-                  )}
-                </Button>
-              </div>
-
-              <div className="hidden lg:flex items-center justify-center gap-x-3">
-                <div className="flex gap-x-4">
-                  <Link href={loginPath}>
-                    <Button
-                      variant="outline"
-                      className="border px-6 text-sm rounded-full"
-                    >
-                      Login
-                    </Button>
-                  </Link>
-
-                  <Link href={signupPath}>
-                    <Button
-                      variant="secondary"
-                      className="bg-white text-black px-6 text-sm rounded-full"
-                    >
-                      SignUp
-                    </Button>
-                  </Link>
-                </div>
-
-                <ModeToggle />
+            <div className="hidden lg:block">
+              <div className="flex space-x-4">
+                {navigationData.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    aria-current={item.current ? "page" : undefined}
+                    className={classNames(
+                      item.current
+                        ? " text-black dark:text-white"
+                        : "text-black/70 dark:text-gray-400  dark:hover:text-white",
+                      "rounded-md px-3 py-2  lg:text-sm xl:text-md font-medium"
+                    )}
+                  >
+                    {item.name}
+                  </a>
+                ))}
               </div>
             </div>
 
-            {/* Mobile Menu Panel */}
+            <div className="lg:hidden">
+              <Button
+                variant="outline"
+                onClick={() => setIsOpen(!isOpen)}
+                className="rounded-md  p-1"
+              >
+                {isOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </Button>
+            </div>
+
+            <div className="hidden lg:flex items-center justify-center gap-x-3">
+              <div className="flex gap-x-4">
+                <Link href={loginPath}>
+                  <Button
+                    variant="outline"
+                    className="border px-6 text-sm rounded-full"
+                  >
+                    Login
+                  </Button>
+                </Link>
+
+                <Link href={signupPath}>
+                  <Button
+                    variant="secondary"
+                    className="bg-white text-black px-6 text-sm rounded-full"
+                  >
+                    SignUp
+                  </Button>
+                </Link>
+              </div>
+
+              <ModeToggle />
+            </div>
           </div>
+
+          {/* Mobile Menu Panel */}
         </div>
 
         <div
           className={`lg:hidden ${
             isOpen
-              ? "block absolute top-16 z-50 bg-white dark:bg-black  w-[80%] left-10 rounded-md border p-2 "
+              ? "block absolute top-24 z-50 bg-white  dark:bg-black w-[80%] left-10 rounded-md border p-2 "
               : "hidden"
           }`}
         >
           <div
-            className="  w-full
+            className="z-50  w-full
          "
           >
             {navigationData.map((item) => (
@@ -184,4 +178,4 @@ const HeaderSquareWeb2 = ({
   );
 };
 
-export default HeaderSquareWeb2;
+export default HeaderRoundedWeb2;

@@ -3,24 +3,103 @@ import Marquee from "@/components/ui/marquee";
 
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
+    name: "Sarah M.",
+    username: "@Sarah",
+    body: "This website builder made creating my site so easy!",
     img: "https://avatar.vercel.sh/jack",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
+    name: "John D.",
+    username: "@John",
+    body: "Incredible templates and user-friendly interface, highly recommended!",
     img: "https://avatar.vercel.sh/jill",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Lisa T.",
+    username: "@Lisa",
+    body: "I built a professional website in minutes. Fantastic tool!",
     img: "https://avatar.vercel.sh/john",
   },
+  {
+    name: "Mark S.",
+    username: "@Mark",
+    body: "Perfect for beginners, no coding needed at all!",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  {
+    name: "Emma W.",
+    username: "@Emma",
+    body: "Amazing features and intuitive design, best builder I've used!",
+    img: "https://avatar.vercel.sh/jill",
+  },
+  {
+    name: "David L.",
+    username: "@David",
+    body: "Super fast and easy to use, great customer support!",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  {
+    name: "Rachel K.",
+    username: "@Rachel",
+    body: "Affordable and packed with features, my go-to website builder!",
+    img: "https://avatar.vercel.sh/jill",
+  },
+  {
+    name: "Paul J.",
+    username: "@Paul",
+    body: "Highly customizable, yet simple to use. Love this platform!",
+    img: "https://avatar.vercel.sh/john",
+  },
+  {
+    name: "Michelle H.",
+    username: "@Michelle",
+    body: "Professional results with minimal effort, I’m thrilled!",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  {
+    name: "James P.",
+    username: "@James",
+    body: "Fantastic templates and drag-and-drop functionality, simply awesome!",
+    img: "https://avatar.vercel.sh/jill",
+  },
+  {
+    name: "Jessica R.",
+    username: "@Jessica",
+    body: "Building my business site was fast and stress-free!",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  {
+    name: "Michael B.",
+    username: "@Michael",
+    body: "Best website builder I've tried, it’s super flexible and reliable.",
+    img: "https://avatar.vercel.sh/john",
+  },
+  {
+    name: "Olivia G.",
+    username: "@Olivia",
+    body: "I created my dream website effortlessly, thanks to this builder!",
+    img: "https://avatar.vercel.sh/jill",
+  },
+  {
+    name: "Chris E.",
+    username: "@Chris",
+    body: "User-friendly and efficient, perfect for my online store!",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  {
+    name: "Emily C.",
+    username: "@Emily",
+    body: "Easy, efficient, and looks great on all devices!",
+    img: "https://avatar.vercel.sh/john",
+  },
+  {
+    name: "Daniel F.",
+    username: "@Daniel",
+    body: "Great templates, easy setup, and quick to publish. Love it!",
+    img: "https://avatar.vercel.sh/john",
+  }
 ];
+
 
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);

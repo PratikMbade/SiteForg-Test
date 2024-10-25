@@ -26,7 +26,7 @@ interface PlanCadTypes{
 }
 
 const PlanCard = ({ title, price, period, features }:PlanCadTypes) => (
-<Card className={`h-auto w-96 bg-neutral-200 dark:bg-neutral-800 shadow-lg rounded-lg ${title === "Starter" ? 'border border-orange-600' : ''}`}>
+<Card className={`h-auto pb-12 w-96  bg-neutral-200 dark:bg-neutral-800 shadow-lg rounded-lg ${title === "Starter" ? 'border border-orange-600' : ''}`}>
     <div className="flex justify-center">
       <div className="h-[15rem] w-[90%] mt-5   flex flex-col justify-between p-5">
         <p className="font-semibold">{title}</p>
