@@ -13,7 +13,7 @@ export function FeaturesSectionGrid() {
     {
       title: "Components",
       description:
-        "Track and manage your project issues with ease using our intuitive interface.",
+        "Build website with our components. componets on react and tailwindcss.",
       skeleton: <SkeletonOne />,
       className:
         "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
@@ -36,7 +36,7 @@ export function FeaturesSectionGrid() {
     {
       title: "Deploy in seconds",
       description:
-        "With our blazing fast, state of the art, cutting edge, we are so back cloud servies (read AWS) - you can deploy your model in seconds.",
+        "We provide  blazing fast, state of the art, cutting edge, we are so back cloud servies (read Vercel) - you can deploy your model in seconds.",
       skeleton: <SkeletonFour />,
       className: "col-span-1 lg:col-span-3 border-b lg:border-none",
     },
@@ -112,7 +112,7 @@ export const SkeletonOne = () => {
         <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
           {/* TODO */}
           <Image
-            src="/tab-scroll-image.png"
+            src="/componentImg.png"
             alt="header"
             width={800}
             height={800}

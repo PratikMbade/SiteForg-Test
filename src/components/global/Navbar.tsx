@@ -32,7 +32,9 @@ const HeaderSquareWeb2 = ({
     { name: "Home", href: "#", current: true },
     { name: "Product", href: "#", current: false },
     { name: "Feature", href: "#", current: false },
+    { name: "Pricing", href: "#", current: false },
     { name: "About", href: "#", current: false },
+
   ];
 
   function classNames(...classes: string[]) {
@@ -41,23 +43,33 @@ const HeaderSquareWeb2 = ({
 
   return (
     <>
-      <div className="relative   flex items-center justify-center h-16">
-        <div className="fixed  pb-2  bg-white border-b border-b-neutral-800  dark:bg-black w-full flex z-40 items-center justify-center ">
-          <div className="    h-14  lg:[80%] xl:w-3/4">
+      <div className="relative mt-0  flex items-center justify-center h-20  ">
+        <div className="fixed mt-0 h-20  bg-white shadow-xl  dark:bg-neutral-800 w-full flex z-40 items-center justify-center ">
+          <div className="    h-16  lg:[80%] xl:w-3/4">
             <div className="flex  items-center   justify-between  mt-4 px-5  mb-3  w-[100vw] lg:w-full  ">
-            <div>
+              <div className="hidden dark:block">
                 <Image
                   src="/siteforg.png"
                   alt="logo"
-                  width={80}
-                  height={80}
+                  width={140}
+                  height={140}
+                  className="-translate-y-1"
+                />{" "}
+              </div>
+
+              <div className="dark:hidden">
+                <Image
+                  src="/SiteForgLight.jpeg"
+                  alt="logo"
+                  width={130}
+                  height={130}
                   className="-translate-y-1"
                 />{" "}
               </div>
 
               <div className="hidden lg:block">
                 <div className="flex space-x-4">
-                  {navigationData.map((item) => (
+                  {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}

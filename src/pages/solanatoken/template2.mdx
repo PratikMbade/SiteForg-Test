@@ -1,0 +1,119 @@
+
+
+import Template4 from "@/components/(docs)/(solanatemplates)/template4";
+
+# Template 2
+
+<Template4 />
+### 1.Navigation Links
+
+You can create a navigation bar with links to your social media and other platforms using the `NavigationBar` component. This makes it easy for users to access your channels and resources.
+
+#### Example Code
+
+First, define an array of links for your social platforms:
+
+```tsx
+const linksOfSocails = [
+  { telegramLink: "https://t.me/your-telegram-channel" },
+  { xLink: "https://twitter.com/your-handle" },
+  { dexScreener: "https://dexscreener.com" },
+  { jupiter: "https://jup.ag" },
+];
+```
+
+```tsx
+<NavigationBar linksOfSocails={linksOfSocails} />
+```
+
+#### 2.Hero Section
+
+```tsx
+import { Template4HeroSection } from "@/components/template-components/template4-herosection";
+```
+
+```tsx
+<Template4HeroSection
+  TokenName={"SolAlienz 👽"}
+  TokenDescription={
+    "   The mischievous cosmic beings who snatch up Solana coins with their glowing claws! They may look terrifying, but they're here totrade—and maybe abduct a wallet or two! 👽✨"
+  }
+  ImgUrl={"/Alien01.png"}
+/>
+```
+
+### 3.Trading View
+
+```tsx
+import { TradingviewChart } from "@/components/template-components/trading-view";
+```
+
+```tsx
+ <TradingviewChart/>
+```
+
+#### 4.Infinite Moving Ad
+
+```tsx
+import { InfiniteMovingCardsTemplate4 } from "@/components/template-components/template4-infinitemoving";
+```
+
+In this section, you can customize the text to reflect your token or branding. Feel free to add emojis to make it more visually appealing and engaging. For example:
+
+```tsx
+let items: ItemsTypes[] = [
+  {
+    text: "SolAlienz 👾",
+  },
+  {
+    text: "SolAlienz 👽",
+  },
+  {
+    text: "SolAlienz 🛸",
+  },
+  {
+    text: "SolAlienz 👽",
+  },
+];
+```
+
+```tsx
+<InfiniteMovingCardsTemplate4 items={items} />
+```
+
+### 5. Feature section and Buy button
+
+```tsx
+import { Template4FeatureSection } from "@/components/template-components/template4-featuresection";
+```
+
+### Template4FeatureSection Component
+
+The `Template4FeatureSection` component allows you to display an image along with a button. You can customize the image source, button text, and the image's width and height by passing props to the component.
+
+#### Usage Example:
+
+```tsx
+<Template4FeatureSection
+  ImgUrlOrPath="/Alien02.png"
+  TextOnButton="Buy SolAlienz"
+  ImgWidth={500}
+  ImgHeight={500}
+/>
+```
+### 6.Tokenomics Section
+
+The Tokenomics section displays important information about your token, such as its ticker symbol, total supply, and tax rate. You can customize this section using the `Template4Tokennomics` component by providing the necessary props.
+
+#### Example Code
+
+Here is an example of how to use the `Template4Tokennomics` component:
+
+```tsx
+<Template4Tokennomics
+  tokenTicker={"$SolAlienz"}
+  tokenSupply={"1 Billion"}
+  tokenTax={"0%"}
+  imageUrl={"/Alien03.png"}
+/>
+

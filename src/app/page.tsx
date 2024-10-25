@@ -1,30 +1,35 @@
-import BlocksPage from "@/components/(docs)/(blocks)/block-main";
-import HeroSection from "@/components/(docs)/(components)/hero2";
+
+import { MarqueeDemoVertical } from "@/components/(homepage)/customer-reviews-moving-cards";
 import { FeaturesSectionGrid } from "@/components/(homepage)/feature-grid";
+import Footer1 from "@/components/(homepage)/footer";
+import { BentoDemo } from "@/components/(homepage)/grid";
+import HeroProduct from "@/components/(homepage)/hero-section";
 import HeroSaaS from "@/components/(homepage)/hero-section";
 import { InfiniteMovingCardsDemo } from "@/components/(homepage)/infinite-card-scroll";
+import { Pricing1 } from "@/components/(homepage)/pricing";
 import { FeaturesSectionDemo } from "@/components/(homepage)/problem-info-cards";
-import { HeroScrollDemo } from "@/components/(homepage)/scroll-tab";
-import { ModeToggle } from "@/components/Buttons/Themetoggle";
-import { Hero } from "@/components/global/Hero";
+import { FeaturesToggle } from "@/components/(homepage)/toggle-feature";
 import HeaderSquareWeb2 from "@/components/global/Navbar";
-import Navbar, {  } from "@/components/global/Navbar";
-import Image from "next/image";
+
 
 
 
 
 export default function Home() {
   return (
-    <main className="flex h-auto flex-col items-center justify-between dark:bg-black">
+    <main className="flex h-auto flex-col items-center justify-between dark:bg-neutral-900">
 
-      <HeaderSquareWeb2 title={""} navigationData={[]} loginPath={"login"} signupPath={"signup"}/>
-      <HeroSaaS shinyText={"Introducing Siteforg 🛠️"} mainHeading={" Websites made effortlessly and launched in days"} subHeading={" Bring your ideas to life with our easy-to-use website builder and AI-powered image & video generator. Fast, beautiful, and personalized."} getStartPagePath={""}/>
-      <FeaturesSectionDemo/>
-      <FeaturesSectionGrid/>
-      <InfiniteMovingCardsDemo/>
+      <HeroProduct shinyText={"Introducing Siteforg 🛠️"}  subHeading={" Bring your ideas to life with our easy-to-use website builder and AI-powered image & video generator. Fast, beautiful, and personalized."} getStartPagePath={""}/>
+       <FeaturesToggle/>
+      {/* <FeaturesSectionDemo/> */}
+      {/* <FeaturesSectionGrid/> */}
+      <Pricing1 mainHeading={"Simple pricing for advanced people"} subHeading={""}/>
 
-  
+      <BentoDemo/>
+
+      <MarqueeDemoVertical/>
+     
+      <Footer1/>
     </main>
   );
 }

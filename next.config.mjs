@@ -13,7 +13,9 @@ const nextConfig = {
       "subdomain",
       "files.stripe.com",
       "upload.wikimedia.org",
-      "logos-world.net"
+      "logos-world.net",
+      "picperf.io",
+      "next-auth.js.org"
     ],
   },
 };

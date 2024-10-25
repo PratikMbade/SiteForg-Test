@@ -15,12 +15,11 @@ const Template4 = () => {
       </div>
 
         <Image
-         src="/Template4Img.png"
+         src="/Template1.png"
          alt='TemplateImg'
          height={700}
          width={700}
-         className='border rounded-xl'
-
+         className='border roundx'
         />
     </div>
   )

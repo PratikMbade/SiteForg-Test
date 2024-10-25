@@ -52,6 +52,11 @@ export function FeaturesSectionDemo() {
       description: "I just ran out of copy ideas. Accept my sincere apologies",
       icon: <IconHeart />,
     },
+    {
+      title: "Deployment within mintues",
+      description: "Deploy you are website within minutes",
+      icon: <IconHeart />,
+    },
   ];
   return (
     <>

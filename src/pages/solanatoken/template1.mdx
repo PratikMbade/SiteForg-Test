@@ -1,27 +1,180 @@
-import Template4 from "@/components/(docs)/(solanatemplates)/template4"
+import Template1 from "@/components/(docs)/(solanatemplates)/template1";
 
-#  Template 1 
+# Template 1
 
-<Template4/>
+<Template1 />
+### 1.Navigation Links
 
-### You can modify above template
+```tsx
+import { Template1Navbar } from "@/components/template-components/template1-navbar";
+```
 
-#### 1.Navigation links
+You can create a navigation bar with links to your social media and other platforms using the `NavigationBar` component. This makes it easy for users to access your channels and resources.
 
-``` tsx
-  const linksOfSocails = [
-    { telegramLink: "https://t.me/your-telegram-channel" },
-    { xLink: "https://twitter.com/your-handle" },
-    { dexScreener: "https://dexscreener.com" },
-    { jupiter: "https://jup.ag" },
-  ];
+#### Example Code
 
+First, define an array of links for your social platforms:
+
+```tsx
+const linksOfSocails = [
+  { telegramLink: "https://t.me/your-telegram-channel" },
+  { xLink: "https://twitter.com/your-handle" },
+  { dexScreener: "https://dexscreener.com" },
+  { jupiter: "https://jup.ag" },
+];
 ```
 
 ```tsx
- <NavigationBar linksOfSocails={linksOfSocails} />
+<Template1Navbar linksOfSocails={linksOfSocails} />
 ```
-
 
 #### 2.Hero Section
 
+```tsx
+import { Template1HeroSection } from "@/components/template-components/template1-herosection";
+```
+
+```tsx
+<Template1HeroSection
+  TokenName={"BlobberCoin"}
+  TokenDescription={
+    " Why hustle when you can blob? The laziest, squishiest token on Solana, BlobberCoin jiggles through the blockchain, doing nothing but vibing. Each coin is a unique blob with zero ambition but max chill. "
+  }
+  ImgUrl={""}
+/>
+```
+
+### 3.Token Contract Address
+
+```tsx
+import { TokenContractAddress } from "@/components/template-components/tokenAddress";
+```
+
+```tsx
+<TokenContractAddress
+  tokenAddress={"BqGVf8WJ1TaFZd7jAnqMk85nkCXDVTy5yRCtmcvJ75tA"}
+/>
+```
+
+### 4.Trading View
+
+```tsx
+import { TradingviewChart } from "@/components/template-components/trading-view";
+```
+
+```tsx
+<TradingviewChart />
+```
+
+#### 5.Infinite Moving Ad
+
+```tsx
+import { Template1InfiniteMovingCards } from "@/components/template-components/template1-infinitemoving";
+```
+
+In this section, you can customize the text to reflect your token or branding. Feel free to add emojis to make it more visually appealing and engaging. For example:
+
+```tsx
+const testimonialsTemplate1 = [
+  {
+    img: "/blobberCoinMeme1.png",
+  },
+  {
+    img: "/BlobberCoinMeme2.png",
+  },
+  {
+    img: "/BlobberCoinMeme2.png",
+  },
+];
+```
+
+```tsx
+<Template1InfiniteMovingCards testimonials={testimonialsTemplate1} />
+```
+
+### 6. Tokenomics
+
+```tsx
+import { Template1Tokenomics } from "@/components/template-components/template1-tokenomic";
+```
+
+### Tokenomics Component
+
+The Tokenomics section displays important information about your token, such as its ticker symbol, total supply, and tax rate. You can customize this section using the `Template4Tokennomics` component by providing the necessary props.
+
+#### Example Code
+
+```tsx
+<Template1Tokenomics
+  tokenTicker={"BlobberTicker"}
+  tokenSupply={"1 Billion"}
+  tokenTax={"0% Tax"}
+/>
+```
+
+### 7.Roadmap
+
+```tsx
+import { Template1Roadmap } from "@/components/template-components/template1-roadmap";
+import { TimelineEntry } from "@/components/ui/timeline";
+```
+##### You can set your token roamdmap data in the following array
+
+
+```tsx
+      const blobberCoinRoadmap:TimelineEntry[] = [
+        {
+          title: "Q.1 2023",
+          description: "Conceptualize Blobber Coin",
+          isCompleted: true,
+          time: "01 Jan 2023",
+        },
+        {
+          title: "Q.2 2023",
+          description: "Initial Token Development",
+          isCompleted: true,
+          time: "15 Apr 2023",
+        },
+        {
+          title: "Q.3 2023",
+          description: "Blobber Coin Airdrop",
+          isCompleted: true,
+          time: "30 Aug 2023",
+        },
+        {
+          title: "Q.4 2023",
+          description: "Launch BlobberCoin Staking Platform",
+          isCompleted: false,
+          time: "18 Dec 2023",
+        },
+        {
+          title: "Q.1 2024",
+          description: "Partnership with Major Exchanges",
+          isCompleted: false,
+          time: "10 Feb 2024",
+        },
+        {
+          title: "Q.2 2024",
+          description: "Release Blobber Coin Wallet",
+          isCompleted: false,
+          time: "01 May 2024",
+        },
+        {
+          title: "Q.3 2024",
+          description: "Blobber Coin NFT Integration",
+          isCompleted: false,
+          time: "20 Aug 2024",
+        },
+        {
+          title: "Q.4 2024",
+          description: "Full Decentralized Governance",
+          isCompleted: false,
+          time: "15 Nov"
+        }
+    
+  ];
+```
+
+```tsx
+<Template1Roadmap blobberCoinRoadmap={blobberCoinRoadmap}/>
+```
