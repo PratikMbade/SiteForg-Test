@@ -164,18 +164,16 @@ const HeaderRoundedWeb2 = ({
 
                 <div className="flex gap-x-4">
 
-                <Link href="/login" className="flex gap-x-3">
-                  <Button variant="default" >
-                    Login 
+                <Link href="/components/header">
+                  <Button
+                  variant="default"
+                  className="rounded-lg"
+                  >
+                    Dashboard
                   </Button>
+                </Link>
 
-                  </Link>
-
-                  <Link href="/signup">
-                  <Button className="dark:bg-white dark:text-black text-white bg-neutral-500" >
-                    Singup 
-                  </Button>
-                  </Link>
+            
                 </div>
 
                 
@@ -202,24 +200,16 @@ const HeaderRoundedWeb2 = ({
 
             <div className="hidden lg:flex items-center justify-center gap-x-3">
               <div className="flex gap-x-4">
-                <Link href={loginPath}>
+                <Link href="/components/header">
                   <Button
                   variant="default"
                   className="rounded-lg"
                   >
-                    Login
+                    Dashboard
                   </Button>
                 </Link>
 
-                <Link href={signupPath}>
-                  <Button
-                  variant="outline"
-                  className="rounded-lg"
-
-                  >
-                    SignUp
-                  </Button>
-                </Link>
+            
               </div>
 
               <ModeToggle />

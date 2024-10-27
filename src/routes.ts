@@ -2,6 +2,7 @@
 
 export const publicRoute = [
     "/",
+    "/components/header"
    
 ]
 
