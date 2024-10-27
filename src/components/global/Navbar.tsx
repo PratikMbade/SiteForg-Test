@@ -164,14 +164,14 @@ const HeaderRoundedWeb2 = ({
 
                 <div className="flex gap-x-4">
 
-                <Link href="/components/header">
+                {/* <Link href="/components/header">
                   <Button
                   variant="default"
                   className="rounded-lg"
                   >
                     Dashboard
                   </Button>
-                </Link>
+                </Link> */}
 
             
                 </div>
@@ -200,14 +200,14 @@ const HeaderRoundedWeb2 = ({
 
             <div className="hidden lg:flex items-center justify-center gap-x-3">
               <div className="flex gap-x-4">
-                <Link href="/components/header">
+                {/* <Link href="/components/header">
                   <Button
                   variant="default"
                   className="rounded-lg"
                   >
                     Dashboard
                   </Button>
-                </Link>
+                </Link> */}
 
             
               </div>
