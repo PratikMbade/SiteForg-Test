@@ -1,4 +1,4 @@
-import { IntroductionComponents } from "../components/introduction-component";
+import { IntroductionComponents } from "../_components/introduction-component";
 
 export default function IntroductionPage() {
   return (

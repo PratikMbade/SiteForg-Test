@@ -4,7 +4,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState, useTransition } from "react";
+import { Suspense, useState, useTransition } from "react";
 import {
   Card,
   CardContent,
@@ -77,7 +77,7 @@ export function LoginForm() {
   });
   }
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+      <div className="w-full h-screen flex items-center justify-center">
       <Card className="mx-auto max-w-sm shadow-xl">
         <CardHeader>
           <CardTitle className="text-2xl">Login</CardTitle>
@@ -151,5 +151,6 @@ export function LoginForm() {
         </CardFooter>
       </Card>
     </div>
+
   );
 }

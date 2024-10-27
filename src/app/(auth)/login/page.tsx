@@ -1,11 +1,16 @@
 import { LoginForm } from "@/components/(auth)/login-form";
+import { Suspense } from "react";
 
 
 
 
-export default function LoginPage(){
+export default async function LoginPage(){
 
   return(
-    <LoginForm/>
+    <Suspense fallback={<div>Loading.....</div>}>
+          <LoginForm/>
+
+      </Suspense>
+
   )
 }

@@ -79,7 +79,7 @@ import { signOut } from "next-auth/react"
 import { redirect } from "next/navigation"
 import { getUserinfo } from "@/actions/user"
 import { User } from "next-auth"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 // This is sample data.
 const data = {
   user: {
