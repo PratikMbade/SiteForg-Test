@@ -9,7 +9,7 @@ const MDXContent = () => (
     <div className="text-2xl my-5 text-muted-foreground">
       Welcome to the <strong>Web3 Boilerplate</strong>! This template is designed to simplify dApp development on both <strong>Ethereum</strong> 🦄 and <strong>Solana</strong> ⚡ ecosystems.
     </div>
-   <strong className='text-2xl font-semibold'>Next.js 14's App Router</strong>
+   <strong className='text-2xl font-semibold'>Next.js 14 App Router</strong>
    <p className='text-xl font-semibold'>Features</p>
     <ul>
       <li>🔗 <strong>Wallet adapter</strong> for easy wallet connections</li>

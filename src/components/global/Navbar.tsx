@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { FileQuestionIcon, Home, InfoIcon, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/theme-modal";
 import Link from "next/link";
 import Image from "next/image";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { FaMoneyBill } from "react-icons/fa";
 
 interface NavType {
   name: string;
@@ -29,42 +31,76 @@ const HeaderRoundedWeb2 = ({
   const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
-    { name: "Home", href: "#", current: true },
-    { name: "Product", href: "#", current: false },
-    { name: "Feature", href: "#", current: false },
-    { name: "About", href: "#", current: false },
+    { name: "Features", href: "/#Feature", current: true },
+    { name: "Pricing", href: "/#Pricing", current: false },
+    { name: "Review", href: "/#Review", current: false },
+    { name: "FAQ", href: "/#FAQ", current: false },
   ];
 
   function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
   }
 
+  const links = [
+    {
+      href: "/",
+      label: "Features",
+      icon: Home,
+      className: "text-foreground hover:text-foreground",
+    },
+
+    {
+      href: "/",
+      label: "Pricing",
+      icon: FaMoneyBill,
+      className: "text-muted-foreground hover:text-foreground",
+    },
+    {
+      href: "/",
+      label: "Review",
+      icon: InfoIcon,
+      className: "text-muted-foreground hover:text-foreground",
+    },
+    {
+      href: "#",
+      label: "FAQ",
+      icon: FileQuestionIcon,
+      className: "text-muted-foreground hover:text-foreground",
+    },
+   
+  ];
+
   return (
     <>
       <div className="relative  flex items-center justify-center h-24 z-40 ">
-        <div className=" fixed bg-gradient-to-r from-neutral-200 to-stone-300  dark:bg-gradient-to-r dark:from-neutral-800 dark:to-stone-800 flex rounded-full w-[90%]  h-14  lg:[80%] xl:w-3/4">
+        <div className=" fixed bg-gradient-to-r from-neutral-200 to-stone-300  dark:bg-gradient-to-r dark:from-neutral-800 dark:to-stone-800 flex rounded-full  w-[90%]  h-14  lg:[80%] xl:w-3/4">
           <div className="flex  items-center  w-full justify-between mx-5 lg:mx-10 mt-4  mb-3">
             <div className=" dark:hidden">
-              <Image
+            <Link href="/">
+            <Image
               src="/site-light.png"
               alt="site"
               height={100}
               width={100}
               />
+            </Link>
             </div>
 
             <div className="hidden dark:block">
+              <Link href="/">
               <Image
               src="/siteforg.png"
               alt="site"
               height={100}
               width={100}
               />
+              </Link>
+
             </div>
 
             <div className="hidden lg:block">
               <div className="flex space-x-4">
-                {navigationData.map((item) => (
+                {navigation.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
@@ -82,26 +118,94 @@ const HeaderRoundedWeb2 = ({
               </div>
             </div>
 
-            <div className="lg:hidden">
+
+
+            <Sheet>
+            <SheetTrigger asChild className="border-none">
               <Button
                 variant="outline"
-                onClick={() => setIsOpen(!isOpen)}
-                className="rounded-md  p-1"
+                size="icon"
+                className="shrink-0 lg:hidden z-50 mr-4 rounded-[8px]"
               >
-                {isOpen ? (
-                  <X className="h-6 w-6" />
-                ) : (
-                  <Menu className="h-6 w-6" />
-                )}
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Toggle navigation menu</span>
               </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="flex flex-col border-none">
+              <nav className="grid gap-2 text-lg font-medium">
+                <Link
+                  href="#"
+                  className="flex items-center gap-2 text-lg font-semibold mb-3"
+                >
+                  <div className=" dark:hidden">
+            <Link href="/">
+            <Image
+              src="/site-light.png"
+              alt="site"
+              height={100}
+              width={100}
+              />
+            </Link>
             </div>
+
+            <div className="hidden dark:block">
+              <Link href="/">
+              <Image
+              src="/siteforg.png"
+              alt="site"
+              height={100}
+              width={100}
+              />
+              </Link>
+
+            </div>
+
+                </Link>
+
+                <div className="flex gap-x-4">
+
+                <Link href="/login" className="flex gap-x-3">
+                  <Button variant="default" >
+                    Login 
+                  </Button>
+
+                  </Link>
+
+                  <Link href="/signup">
+                  <Button className="dark:bg-white dark:text-black text-white bg-neutral-500" >
+                    Singup 
+                  </Button>
+                  </Link>
+                </div>
+
+                
+
+                {links.map((link, index) => (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    className={`mx-[-0.65rem] flex items-center gap-4  rounded-xl px-3 py-2 ${link.className}`}
+                  >
+                    <link.icon className="h-5 w-5" />
+                    {link.label}
+                  </Link>
+                ))}
+
+
+              </nav>
+
+              <ModeToggle/>
+            </SheetContent>
+          </Sheet>
+
+      
 
             <div className="hidden lg:flex items-center justify-center gap-x-3">
               <div className="flex gap-x-4">
                 <Link href={loginPath}>
                   <Button
-                    variant="outline"
-                    className="border px-6 text-sm rounded-full"
+                  variant="default"
+                  className="rounded-lg"
                   >
                     Login
                   </Button>
@@ -109,8 +213,9 @@ const HeaderRoundedWeb2 = ({
 
                 <Link href={signupPath}>
                   <Button
-                    variant="secondary"
-                    className="bg-white text-black px-6 text-sm rounded-full"
+                  variant="outline"
+                  className="rounded-lg"
+
                   >
                     SignUp
                   </Button>
@@ -124,56 +229,11 @@ const HeaderRoundedWeb2 = ({
           {/* Mobile Menu Panel */}
         </div>
 
-        <div
-          className={`lg:hidden ${
-            isOpen
-              ? "block absolute top-24 z-50 bg-white  dark:bg-black w-[80%] left-10 rounded-md border p-2 "
-              : "hidden"
-          }`}
-        >
-          <div
-            className="z-50  w-full
-         "
-          >
-            {navigationData.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                aria-current={item.current ? "page" : undefined}
-                className={classNames(
-                  item.current
-                    ? "text-white bg-black dark:bg-white dark:text-black"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-700 hover:text-white",
-                  "block rounded-md px-3 py-2 text-base font-medium"
-                )}
-              >
-                {item.name}
-              </a>
-            ))}
 
-            <div className="flex flex-col gap-x-4 mx-3 gap-y-2">
-              <Link href={loginPath}>
-                <Button
-                  variant="outline"
-                  className="border rounded-md py-1 w-full"
-                >
-                  Login
-                </Button>
-              </Link>
+  
 
-              <Link href={signupPath}>
-                <Button
-                  variant="secondary"
-                  className="border rounded-md py-1 w-full"
-                >
-                  SignUp
-                </Button>
-              </Link>
-              <ModeToggle />
-            </div>
-          </div>
         </div>
-      </div>
+
     </>
   );
 };

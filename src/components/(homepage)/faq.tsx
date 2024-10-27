@@ -62,18 +62,18 @@ const FAQ1 = () => {
       
   return (
 
-         <div className='w-full  grid grid-cols-1  lg:grid-cols-2 gap-x-10  my-28'>
+         <div id='FAQ' className='w-full  grid grid-cols-1  lg:grid-cols-2 gap-x-10  my-28'>
         
         <div className=' flex flex-col items-end  '>
             <p className='text-6xl font-bold  max-w-2xl text-center mt-10'>Frequently asked questions</p>
 
         </div>
         <div className=' '>
-        <Accordion type="single" collapsible className="w-full lg:w-1/2 text-3xl mt-5">
+        <Accordion type="single" collapsible className="w-[80%] mx-auto lg:w-1/2 text-3xl mt-5">
         {accordionData.map(({ value, triggerText, contentText }) => (
       <AccordionItem key={value} value={value}>
-        <AccordionTrigger className='text-xl'>{triggerText}</AccordionTrigger>
-        <AccordionContent className='text-lg'>
+        <AccordionTrigger className='text-sm lg:text-xl'>{triggerText}</AccordionTrigger>
+        <AccordionContent className='text-sm lg:text-lg'>
           {contentText}
         </AccordionContent>
       </AccordionItem>

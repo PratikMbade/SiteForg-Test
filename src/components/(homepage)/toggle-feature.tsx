@@ -14,12 +14,12 @@ import { SiWalletconnect } from "react-icons/si";
 
 export function FeaturesToggle() {
   return (
-    <div className=" flex flex-col items-center justify-center my-16 w-screen bg-stone-200 dark:bg-zinc-800 py-10">
-      <div className="mb-10  max-w-4xl mx-auto ">
-        <h1 className="font-extrabold text-xl md:text-5xl  text-neutral-600 ">
+    <div  className=" flex flex-col items-center justify-center my-16 w-screen h-auto bg-stone-200 dark:bg-zinc-800 py-10">
+      <div className="mb-10 max-w-xl  lg:max-w-4xl mx-auto ">
+        <h1 className="font-extrabold text-center text-2xl md:text-5xl  text-neutral-600 dark:text-neutral-300 ">
           Boost your app instantly, launch quicker, and start earning
         </h1>
-        <p className="text-md md:text-xl max-w-4xl font-semibold text-neutral-500 my-3">
+        <p className="text-sm text-center md:text-lg max-w-4xl font-semibold text-neutral-500 my-3">
           Authenticate users 🔐, handle payments, and send emails in record
           time. Spend your energy growing your startup, not wrestling with API
           integrations. ShipFast equips you with the boilerplate code to launch
@@ -29,7 +29,7 @@ export function FeaturesToggle() {
           defaultValue="template"
           className="max-w-4xl flex  flex-col items-center justify-center gap-y-10  bg-none my-5 "
         >
-          <TabsList className="w-full flex flex-wrap items-start  justify-start gap-x-8 bg-transparent  ">
+            <TabsList className="w-full grid grid-cols-3 lg:grid-cols-4  xl:grid-cols-7 gap-x-8 bg-transparent  ">
             <TabsTrigger className="bg-transparent" value="template">
               <div className="flex flex-col items-center justify-center ">
                 <LayoutIcon className="w-10 h-10" />
@@ -75,11 +75,15 @@ export function FeaturesToggle() {
               </div>
             </TabsTrigger>
           </TabsList>
+
+
+           <div className="mt-28 lg:mt-0 text-sm flex items-center justify-center mx-10">
+             
           <TabsContent value="template" className="bg-transparent w-full">
             <div className=" py-20">
               <ul className="flex flex-col gap-y-3">
                 <li>
-                  ✔️ Create reusable, modular components with Tailwind's utility
+                  ✔️ Create reusable, modular components with Tailwind&apos;s utility
                   classes for efficient development.
                 </li>
                 <li>
@@ -91,7 +95,7 @@ export function FeaturesToggle() {
                   enhancing interactivity with Tailwind utilities.
                 </li>
                 <li>
-                  ✔️ Tailwind's responsive utilities ensure your components
+                  ✔️ Tailwind&apos;s responsive utilities ensure your components
                   adapt to all screen sizes effortlessly.
                 </li>
                 <li>
@@ -104,7 +108,7 @@ export function FeaturesToggle() {
           </TabsContent>
           <TabsContent value="auth" className="bg-transparent w-full">
             <div className=" py-20">
-              <ul className="flex flex-col  gap-y-3">
+              <ul className="flex flex-col  gap-y-5">
                 <li>
                   ✔️ Easily implement authentication with NextAuth, supporting
                   multiple providers like Google, GitHub, and more.
@@ -115,7 +119,7 @@ export function FeaturesToggle() {
                 </li>
                 <li>
                   ✔️ Customizable sign-in, sign-out, and authentication
-                  callbacks to tailor the flow to your app's needs.
+                  callbacks to tailor the flow to your app&apos;s needs.
                 </li>
                 <li>
                   ✔️ Supports OAuth, email, and credentials-based logins for
@@ -158,7 +162,7 @@ export function FeaturesToggle() {
             <div className=" py-20">
               <ul className="flex flex-col  gap-y-3">
                 <li>
-                  ✔️ Easily send and manage transactional emails with Emailgun's
+                  ✔️ Easily send and manage transactional emails with Emailgun&apos;s
                   robust API.
                 </li>
                 <li>
@@ -170,7 +174,7 @@ export function FeaturesToggle() {
                   campaigns and notifications.
                 </li>
                 <li>
-                  ✔️ Ensure high deliverability rates with Emailgun's advanced
+                  ✔️ Ensure high deliverability rates with Emailgun&apos;s advanced
                   spam filtering and authentication tools.
                 </li>
                 <li>
@@ -210,7 +214,7 @@ export function FeaturesToggle() {
             <div className=" py-20">
               <ul className="flex flex-col  gap-y-3">
                 <li>
-                  ✔️ Leverage TypeScript's static typing to catch errors early
+                  ✔️ Leverage TypeScript&apos;s static typing to catch errors early
                   and improve code quality in React and Next.js applications.
                 </li>
                 <li>
@@ -245,7 +249,7 @@ export function FeaturesToggle() {
                   traffic spikes without manual intervention.
                 </li>
                 <li>
-                  ✔️ Utilize Vercel's built-in CDN for fast global content
+                  ✔️ Utilize Vercel&apos;s built-in CDN for fast global content
                   delivery, enhancing performance for end-users.
                 </li>
                 <li>
@@ -259,6 +263,7 @@ export function FeaturesToggle() {
               </ul>
             </div>
           </TabsContent>
+           </div>
         </Tabs>
       </div>
     </div>

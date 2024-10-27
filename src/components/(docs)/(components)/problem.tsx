@@ -36,10 +36,10 @@ const ProblemPage = () => {
 
         <div className='flex flex-col gap-y-3 lg:gap-y-0 lg:flex-row items-center justify-center gap-x-3' >
          {
-            data.map((item)=>(
+            data.map((item,index)=>(
 
                  <ProblemCards
-
+                key={index}
                 id={item.id}
                 icon={item.icon}
                 heading={item.heading}

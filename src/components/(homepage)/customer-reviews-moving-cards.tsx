@@ -97,9 +97,8 @@ const reviews = [
     username: "@Daniel",
     body: "Great templates, easy setup, and quick to publish. Love it!",
     img: "https://avatar.vercel.sh/john",
-  }
+  },
 ];
-
 
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
@@ -118,11 +117,11 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative h-52 w-56 cursor-pointer overflow-hidden rounded-xl border p-4",
+        "relative h-fit lg:h-52 w-56 cursor-pointer overflow-hidden rounded-xl border p-4",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
     >
       <div className="flex flex-row items-center gap-2">
@@ -141,39 +140,38 @@ const ReviewCard = ({
 
 export function MarqueeDemoVertical() {
   return (
-    <div className="h-auto">
+    <div id="Review" className="h-auto">
+      <p className="text-2xl mb-24 lg:text-5xl font-extrabold text-center">
+        100+ Developers used our Build-fast
+      </p>
 
-        <p className="text-2xl mb-24 lg:text-5xl font-extrabold text-center">100+ Developers used our Build-fast</p>
-
-<div className="relative flex h-[600px] max-w-8xl flex-row items-center justify-center overflow-hidden rounded-lg   ">
-   
-   <Marquee pauseOnHover vertical className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee pauseOnHover vertical className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-    
-    </div>
+      <div className="relative flex h-[600px] max-w-8xl flex-row items-center justify-center overflow-hidden rounded-lg   ">
+        <Marquee pauseOnHover vertical className="[--duration:20s]">
+          {firstRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover vertical className="[--duration:20s] hidden lg:block">
+          {secondRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover vertical className="[--duration:20s] hidden">
+          {secondRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover vertical className="[--duration:20s] hidden lg:block">
+          {secondRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <Marquee pauseOnHover vertical className="[--duration:20s] hidden lg:block">
+          {firstRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+      </div>
     </div>
   );
 }

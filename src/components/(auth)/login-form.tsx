@@ -145,7 +145,7 @@ export function LoginForm() {
         <CardFooter className="w-full flex items-center justify-center ">
         <Link href="/signup">
         <Button type="button" variant="link">
-          don't have an account
+          don`&apos;`t have an account
           </Button>
         </Link>
         </CardFooter>

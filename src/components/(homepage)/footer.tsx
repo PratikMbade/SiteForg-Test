@@ -47,11 +47,11 @@ const Footer1 = () => {
 
             <div className="flex gap-x-8 ">
                 {links.slice(0, 3).map((linksection, index) => (
-                  <div className="flex ">
+                  <div key={index} className="flex ">
                     <ul className="flex  flex-col lg:mx-10 gap-y-3  lg:gap-x-4 lg:gap-y-4 text-sm">
                         {
-                            linksection.items.map((item)=>(
-                                <li>{item}</li>
+                            linksection.items.map((item,index)=>(
+                                <li key={index}>{item}</li>
 
                             ))
                         }
